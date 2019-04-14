@@ -1,8 +1,19 @@
-# Vusion App
+# Vusion Simple
+
+## Install
+
+``` shell
+npm install
+```
 
 ## Development
 
 ``` shell
-npm install
-vusion dev
+npm run dev
+```
+
+## Build
+
+``` shell
+npm run build
 ```

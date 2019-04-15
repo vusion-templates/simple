@@ -2,8 +2,11 @@
 <div :class="$style.root">
     <header :class="$style.head">
         <div :class="$style.wrap">
-            <u-logo :class="$style.left" color="inverse"></u-logo>
-            <u-navbar>
+            <u-logo :class="$style.left"></u-logo>
+            <u-navbar color="inverse">
+                <u-navbar-item to="/overview">Overview</u-navbar-item>
+                <u-navbar-item to="/basic">Basic</u-navbar-item>
+                <u-navbar-item to="/form">Form</u-navbar-item>
                 <div :class="$style.right">
                     <u-navbar-item href="https://vusion.github.io" target="_blank">文档</u-navbar-item>
                     <u-navbar-item href="https://github.com/vusion" target="_blank">GitHub</u-navbar-item>
@@ -12,12 +15,7 @@
         </div>
     </header>
     <main :class="$style.body">
-        <section :class="$style.banner">
-            <div :class="$style.bannerContent">
-                <h1 :class="$style.heading">Hello World！</h1>
-                <h2 :class="$style.subtitle">Welcome to Vusion Web App</h2>
-            </div>
-        </section>
+        <router-view></router-view>
     </main>
 </div>
 </template>
@@ -54,24 +52,6 @@ export default {};
 }
 
 .body {
-    margin-top: 68px;
-}
-
-.bannerContent {
-    width: 1180px;
-    margin: 0 auto;
-    padding: 80px;
-}
-
-.heading {
-    font-size: 52px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 28px;
-    font-weight: normal;
-    margin: 0;
+    margin-top: $navbar-height;
 }
 </style>

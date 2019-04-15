@@ -16,7 +16,7 @@ module.exports = {
         entry: {
             // babel-polyfill 与 whatwg-fetch 为了兼容低版本浏览器
             // 而且在这里必须添加，相当于一个 import，否则 dll 不知道要引入此包
-            bundle: ['babel-polyfill', 'whatwg-fetch', './src/views/index.js'],
+            bundle: ['babel-polyfill', './src/views/index.js'],
         },
         resolve: {
             alias: {
